@@ -14,10 +14,9 @@
         margin-left: 240px;
     }
 }
-.dashboardContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-}
+.formContainer{
+    border: 0;
+    margin: 10vw !important;
+    display: block !important;
+    padding: 0;
+ }

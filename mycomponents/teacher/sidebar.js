@@ -71,6 +71,12 @@ function ResponsiveDrawer(props) {
           </ListItemIcon>   
           <ListItemText primary={"Paper Generator"} />
         </ListItem>
+        <ListItem button key={"Student IA Marks"} component={Link} href="/teacher/ia">  
+        <ListItemIcon>
+              <FaNewspaper/>
+          </ListItemIcon>   
+          <ListItemText primary={"Student IA Marks"} />
+        </ListItem>
       </List>
     
     </div>

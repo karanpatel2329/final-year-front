@@ -43,6 +43,7 @@ function LoginForm(){
             }else{
               router.push('./pages/about')
               localStorage.setItem('token',res.data.token);
+              localStorage.setItem('role','teacher');
             }
           
             

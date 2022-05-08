@@ -13,6 +13,7 @@ function IaMarksMain({handleToggleSidebar}){
   const [subjectCode, setSubjectCode]=useState([]);
   const [subjectlist, setSubjectList]=useState([]);  
   const [studentlist, setStudentList]=useState([]);  
+  const [marklist,setMarklist]=useState([{value:"1",label:"1"},{value:"2",label:"2"},{value:"3",label:"3"},{value:"4",label:"4"},{value:"5",label:"5"},{value:"6",label:"6"},{value:"7",label:"7"},{value:"8",label:"8"},{value:"9",label:"9"},{value:"10",label:"10"}]);
   const [questionlist,setQuestionList] = useState([{value:"1",label:"1"},{value:"2",label:"2"},{value:"3",label:"3"},{value:"4",label:"4"},{value:"5",label:"5"},{value:"6",label:"6"},{value:"7",label:"7"},{value:"8",label:"8"},{value:"9",label:"9"},{value:"10",label:"10"}]);
   const [open, setOpen] = React.useState(false);
   const [data, setData] = useState([]); 
@@ -88,20 +89,7 @@ function IaMarksMain({handleToggleSidebar}){
   return (
     
   loading?<></>:  <main className={style.main}>
-  <Dialog open={open} onClose={handleToClose}>
-          <DialogTitle>{"Something went wrong"}</DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              Please Try Later
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleToClose} 
-                    color="primary" autoFocus>
-              Close
-            </Button>
-          </DialogActions>
-        </Dialog>
+
   <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
   
   </div>
@@ -111,57 +99,66 @@ function IaMarksMain({handleToggleSidebar}){
   </div>
     
    
-{open?<Dialog open={open} onClose={ () => setOpen(false) } fullWidth maxWidth="lg"> <div>
+{open?<Dialog open={open} onClose={ () => setOpen(false) } fullWidth maxWidth="lg"> <div >
 
-<FormControl className="subjectForm lg-12 md-12" onSubmit={onSubmit}>
+<FormControl className={style.formContainer} onSubmit={onSubmit}>
 <center><h1>Add Subject</h1></center>
     <FormGroup className="mb-6" controlId="formBasicSubjectName">
         <FormLabel>Exam</FormLabel>
         <ReactSelect
         options={examList}
-        value={subject}
-        onChange = {e=>setSubject(e.target.value)}
-       />
+         />
     </FormGroup>
+    <br></br>
     <FormGroup className="mb-6" controlId="formBasicSubjectShortName">
         <FormLabel>Subject</FormLabel>
         <ReactSelect
         options={subjectlist}
-        value={optionSelected}
        />
     </FormGroup>
+    <br></br>
     <FormGroup className="mb-6" controlId="formBasicSubjectCode">
         <FormLabel>Student</FormLabel>
         <ReactSelect
         options={studentlist}
-        value={optionSelected}
        />
     </FormGroup>
+    <br></br>
     <FormGroup className="mb-6" controlId="formBasicSubjectCode">
         <FormLabel>Total Question Attend</FormLabel>
         <ReactSelect
         options={questionlist}
-        value={optionSelected}
-        onChange={e=>setQuestionAttend(e.value)}
        />
     </FormGroup>
+    <br></br>
     <FormGroup className="mb-6" controlId="formBasicSubjectCode">
         <FormLabel>No. of questions</FormLabel>
        <div className='questionMain  lg-6 md-6'>
        <div className='question'>
          Question No.
-         <ReactSelect
+      <ReactSelect
         options={questionlist}
-        value={optionSelected}
        />
        </div>
+      <br></br>
        <div className='question'>
          Marks
         <ReactSelect
-        options={questionlist}
-        value={optionSelected}
+        options={marklist}
+        onChange={e=>{
+          console.log(e.value);
+          setQuestionAttend(e.value)
+        }}
        />
        </div>
+       
+{questionAttend!=0?
+  [...Array(questionAttend)].map((elementInArray, index) => ( 
+    <div key={index}>
+      Text in Loop
+    </div>
+)):<></>
+}
        </div>
     </FormGroup>
     <Button variant="primary" type="submit">
