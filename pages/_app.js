@@ -36,8 +36,8 @@ function MyApp({ Component, pageProps, router }) {
     if(router.pathname.startsWith('/teacher/')||router.pathname.startsWith('/student/')){
       if(token==null||role==null){
         console.log('Ite WOKING');
-        setLoading(false)
-        routers.replace('/');
+      }else{
+        setLoading(false);
       }
     }}
     },[]);

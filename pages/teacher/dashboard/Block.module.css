@@ -1,0 +1,52 @@
+.main{
+    border: 0px solid rgb(119, 114, 114);
+    background-color:rgb(255, 255, 255);
+    border-radius: 12px;
+    width:20vw ;
+    max-width: 20vw;
+    min-height: auto;
+    max-height: 500px;
+    box-shadow:  2px 2px  #888888;
+    height: 40vh;
+    margin-right: 8vw;
+    margin-left:    9vw;
+    margin-bottom: 5vh;
+    
+}   
+
+.Blocks1 {
+    display: flex !important;
+    flex-direction: row;
+  
+  }
+
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+  .blockItem {
+    background-color: #c42020;
+    padding: 10px;
+    flex: 50%; 
+  }
+  @media (max-width: 500px) {
+    .Blocks1 {
+      flex-direction: column;
+
+    }
+    .main{
+        width :80vw !important;
+       max-width: unset !important;
+    }
+  }
+
+
+.BlockButton button{
+    font: inherit;
+    cursor: pointer;
+    
+    border: 1px solid #4A78EE;
+    background-color: #4A78EE;
+    color: white;
+    height: 10vh;
+    border-radius: 0px 0px 12px 12px;
+    width: 100%;
+    align-items: center;
+}

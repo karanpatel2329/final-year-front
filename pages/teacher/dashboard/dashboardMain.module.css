@@ -1,8 +1,8 @@
 .main{
     background-color: #fff !important;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+   
+    height: 100vh !important;
+    display: block;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -10,14 +10,33 @@
 
 @media (min-width:600px) {
     .main{
-        margin: 0!important;
-        margin-left: 240px;
+        margin-left:20vw !important;
     }
+    .mainContainer{
+        margin: 0!important;
+        margin-left:  40px ;
+    }
+}
+.dashboardBlock{
+    border: 1px solid rgb(104, 102, 102);
+    background-color: rgb(104, 102, 102);
+    border-radius: 15px;
+   
 }
 .dashboardContainer{
     display: flex;
+    width: 100vw-240;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
 }
+.marginZero{
+    margin-top: 0 !important;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+
+

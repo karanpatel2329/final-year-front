@@ -64,10 +64,7 @@ function LoginForm(){
           isValid = false;
         }
 
-        else if(usn.trim().length!=10){
-              empErr.emperror = "Invalid Usn";
-              isValid = false;
-        }
+        
         
         setempErr(empErr);
         setPasswordErr(passwordErr);
