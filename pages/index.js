@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 function StudentLoginPage() {
 
     return (<>
-        <Nav/>
+        //<Nav/>
         <Grid container spacing={4}  className='homePageContainer' >
             <Grid item md={6} xs={0} >
                

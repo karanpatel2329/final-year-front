@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import style from "./sidebar.module.css"
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
@@ -44,9 +43,9 @@ function ResponsiveDrawer(props) {
       <br/>
       <br/>
       <Divider />
-      <List className={style.list}>
+      <List>
         
-        <ListItem button key={"Dashboard"} component={Link} href="/teacher/dashboard">    
+        <ListItem button key={"Dashboard"} component={Link} href="/student/dashboard">    
           <ListItemIcon>
               <FaHome/>
           </ListItemIcon>

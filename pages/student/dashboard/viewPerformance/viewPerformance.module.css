@@ -1,0 +1,54 @@
+.main{
+   
+  
+    display: block;
+  
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.chartContainer{
+   width:70vw;
+    height: auto;
+   justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    
+    flex-direction: row;
+}
+.chart{
+    width:60vw;
+   
+    box-shadow:  2px 2px  #888888;
+}
+
+@media (min-width:600px) {
+    .main{
+        margin-left:20vw !important;
+    }
+    .mainContainer{
+        margin: 0!important;
+        margin-left:  40px ;
+    }
+}
+.bottomLabel{
+    color:black !important;
+    
+}
+.select {
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.select {
+    width:10vw;
+}
+.text1{
+    margin-top: 20px;
+    width:10vw;
+}

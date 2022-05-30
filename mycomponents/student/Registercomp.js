@@ -27,7 +27,7 @@ function Registercomp() {
     const [parentsmobileErr, setParentsmobileErr] = useState({});
     const [password, setPassword] = useState();
     const [passwordErr, setPasswordErr] = useState({});
-    // const [gender, setGender] = useState();
+    const [gender, setGender] = useState();
     const [address, setAddress] = useState();
     const [addressErr,setAddressErr] = useState({});
   
@@ -42,6 +42,7 @@ function Registercomp() {
           branch:branch,
           sem:sem,
           subject:[],
+          gender:gender,
           dob:dob,
           contactInfo:{
               address:address,
@@ -213,15 +214,14 @@ function Registercomp() {
         <Grid container style={{display:'inline'}}>
             <Grid item>
             <label htmlFor="gender" class="col-sm-2 col-form-label"><h3>Gender</h3></label>
-            <Grid container >
-                <Grid item>
-                <input type="radio" value="Male" name="gender"  /> Male 
+            <div onChange={e=>setGender(e.target.value)}>
+                <input type="radio" value="Male" name="gender" sele /> Male 
                 <input type="radio" value="Female" name="gender"  />     Female
-                </Grid>
+            </div>
             </Grid>
             
             </Grid>
-        </Grid>
+       
 
         <br/>
         <Grid container>
