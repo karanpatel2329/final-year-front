@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: white;
 }
 
 a {
@@ -15,16 +16,14 @@ a {
   box-sizing: border-box;
 }
 
-Sidebar bar background color changing code
+/* Sidebar bar background color changing code*/
 .css-4t3x6l-MuiPaper-root-MuiDrawer-paper,.css-d9ml5t-MuiDrawer-docked .MuiDrawer-paper{
   background-color: #4A78EE;
 }
 .css-10hburv-MuiTypography-root,.css-cveggr-MuiListItemIcon-root{
   color:white;
 }
-.css-zxtyt4-MuiPaper-root-MuiAppBar-root{
-  display: none !important;
-}
+
 /* Sidebar bar background color changing code*/
 
 /* Logo center in sidebar*/
@@ -59,11 +58,4 @@ Sidebar bar background color changing code
 .MuiButtonBase-root{
   padding: 10px !important ;
 }
-.css-ahj2mt-MuiTypography-root {
-  margin: 0;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
-  font-weight: 400;
-  font-size: 2rem !important;
-  line-height: 1.5;
-  letter-spacing: 0.00938em;
-}
+ 

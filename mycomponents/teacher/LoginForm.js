@@ -36,15 +36,18 @@ function LoginForm(){
             }
           };
         if(isValid){
-        axios.post('http://localhost:3000/studentLogin',  user , axiosConfig)
+        axios.post('http://localhost:3000/teacherLogin',  user , axiosConfig)
           .then(res => {
+            console.log(res);
             if(res.data.data.length===0){
               handleClickToOpen();
             }else{
-              router.push('./pages/about')
+              
+              // router.push('./pages/about')
               localStorage.setItem('token',res.data.token);
-              localStorage.setItem('role','teacher');
+              localStorage.setItem('id',res.data.data.EmployeeId);
             }
+            console.log(res.data)
           
             
           }).catch(e=>console.log(e))
@@ -64,7 +67,10 @@ function LoginForm(){
           isValid = false;
         }
 
-        
+        else if(usn.trim().length!=10){
+              empErr.emperror = "Invalid Usn";
+              isValid = false;
+        }
         
         setempErr(empErr);
         setPasswordErr(passwordErr);

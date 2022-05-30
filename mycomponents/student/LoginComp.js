@@ -22,7 +22,7 @@ function LoginForm(){
     
       const handleSubmit = event => {
         event.preventDefault();
-        event.preventDefault();
+        
         const isValid = formValidation();
        
         console.log(usn,password);
@@ -44,9 +44,12 @@ function LoginForm(){
             if(res.data.data.length===0){
               handleClickToOpen();
             }else{
-              router.push('./pages/about')
+              //router.push('')
               localStorage.setItem('token',res.data.token);
-              localStorage.setItem('role','student');
+              localStorage.setItem('token',res.data.usn);
+              localStorage.setItem('id',res.data.data.USN);
+              console.log(res.data.data.USN);
+              router.push("/student/dashboard")
             }
           
             

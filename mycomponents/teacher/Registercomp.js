@@ -57,6 +57,7 @@ function Registercomp() {
               "Access-Control-Allow-Origin": "localhost:3000",
           }
         };
+        console.log(user);
         axios.post('http://localhost:3000/teacherRegistration',  user , axiosConfig)
             .then(res => {
               console.log(res.data);
@@ -176,12 +177,12 @@ function Registercomp() {
                         label="Branch"
                         onChange={e=>setDepartment(e.target.value)}
                     >
-                        <MenuItem value={"cse"}>CSE</MenuItem>
-                        <MenuItem value={"ise"}>ISE</MenuItem>
-                        <MenuItem value={"ece"}>ECE</MenuItem>
-                        <MenuItem value={"mec"}>MEC</MenuItem>
-                        <MenuItem value={"eee"}>EEE</MenuItem>
-                        <MenuItem value={"civil"}>CIVIL</MenuItem>
+                        <MenuItem value={"CSE"}>CSE</MenuItem>
+                        <MenuItem value={"ISE"}>ISE</MenuItem>
+                        <MenuItem value={"ECE"}>ECE</MenuItem>
+                        <MenuItem value={"MEC"}>MEC</MenuItem>
+                        <MenuItem value={"EEE"}>EEE</MenuItem>
+                        <MenuItem value={"CIVIL"}>CIVIL</MenuItem>
                     </Select>
                     {Object.keys(departmentErr).map((key)=>{
                     return <div className='usncheck' style={{color:"red"}}>{departmentErr[key]}</div>
@@ -202,7 +203,7 @@ function Registercomp() {
        
         <Grid container style={{display:'inline'}}>
             <Grid item>
-            <label htmlFor="gender" class="col-sm-2 col-form-label"><h4 style={{fontWeight:'250'}}>Gender</h4></label>
+            <label htmlFor="gender" class="col-sm-2 col-form-label">Gender</label>
             <Grid container >
                 <Grid item>
                 <input type="radio" value="Male" name="gender"  onChange={e=>setGender(e.target.value)}/> Male 

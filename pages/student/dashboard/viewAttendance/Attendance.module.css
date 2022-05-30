@@ -1,0 +1,36 @@
+.main{
+   
+  
+    display: block;
+  
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.chartContainer{
+   width:70vw;
+    height: 100vh;
+   justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    
+    flex-direction: row;
+}
+.chart{
+    width:60vw;
+    height: 100vh;
+    box-shadow:  2px 2px  #888888;
+}
+
+@media (min-width:600px) {
+    .main{
+        margin-left:20vw !important;
+    }
+    .mainContainer{
+        margin: 0!important;
+        margin-left:  40px ;
+    }
+}

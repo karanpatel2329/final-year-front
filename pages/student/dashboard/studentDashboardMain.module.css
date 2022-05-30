@@ -1,6 +1,6 @@
 .main{
     background-color: #fff !important;
-    
+   
     height: 100% !important;
     display: block;
     justify-content: center;
@@ -25,7 +25,6 @@
 }
 .dashboardContainer{
     display: flex;
-    background-color: white;
     width: 100vw-240;
     flex-direction: column;
     justify-content: center;
