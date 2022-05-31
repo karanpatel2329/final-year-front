@@ -81,16 +81,24 @@ function IaMarksMain({ handleToggleSidebar }) {
       marks
     )
     if(validate){
+      const totalObtainMarks = marks.map(item => item.obtainMark).reduce((prev, curr) => prev + curr, 0);
+   const totalMarks = marks.map(item => item.questionMark).reduce((prev, curr) => prev + curr, 0);
+   console.log(totalMarks);
+   console.log(totalObtainMarks);
     const studentMark = {
       usn:student,
       exam:exam,
       subject:subject,
       totalQuestion:10,
       questionAttend:questionAttend,
-      question:marks
+      question:marks,
+      totalMarks:totalMarks,
+      totalObtainMarks:totalObtainMarks
 
     };
-    
+ 
+   
+    console.log(studentMark);
     let axiosConfig = {
       headers: {
         "Content-Type": "application/json;charset=UTF-8",
