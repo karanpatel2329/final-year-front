@@ -27,7 +27,7 @@ function LoginForm(){
        
         console.log(usn,password);
         const user = {
-          USN: usn,
+          USN: EmployeeId,
           password:password
         };
     

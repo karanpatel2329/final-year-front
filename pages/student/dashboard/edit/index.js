@@ -191,7 +191,7 @@ function Registercomp() {
         <div className={style.subMain}>
           <div className={style.registerform}>
             <h2 className={style.heading}>Student Profile Edit</h2>
-              {loading ? <></>:  <Box
+            {loading ? <></>:  <Box
             component="form"
             onSubmit={handleSubmit}
             autoComplete='off'

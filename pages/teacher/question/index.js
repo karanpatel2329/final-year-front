@@ -149,13 +149,14 @@ function QuestionSetMain(){
                     <div className={style.registerform}>
                     <Grid container>
                           <Grid item>
-                              <FormControl fullWidth className={style.text1} >
-                                  <InputLabel id="demo-simple-select-label">Type</InputLabel>
+                              <FormControl  className={style.text1} >
+                                  <InputLabel id="demo-simple-select-label" fullWidth sx={{ m: 1, width: "50vw" }} >Type</InputLabel>
                                   <Select
                                       labelId="demo-simple-select-label"
                                       id="demo-simple-select"
                                       value={type}
                                       label="Type"
+                                      
                                       onChange={e=>setType(e.target.value)}
                                   >
                                       <MenuItem value={"subjective"}>Subjective</MenuItem>
@@ -209,7 +210,7 @@ function QuestionSetMain(){
 
                     <Grid container>
                           <Grid item>
-                              <FormControl fullWidth className={style.text1} >
+                              <FormControl fullWidth className={style.text2} >
                                   <InputLabel id="demo-simple-select-label">RBT Level</InputLabel>
                                   <Select
                                       labelId="demo-simple-select-label"

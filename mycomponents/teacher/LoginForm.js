@@ -25,7 +25,7 @@ function LoginForm(){
         const isValid = formValidation();
         console.log(usn,password);
         const user = {
-          USN: usn,
+          EmployeeId: usn,
           password:password
         };
     

@@ -40,3 +40,17 @@
     color: white;
     background-color: #4A78EE ;
 }
+.subMain{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+}
+.text1{
+    width:100px;
+}
+.text2{
+    width: 200px !important;;
+}

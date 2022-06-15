@@ -44,7 +44,7 @@ function Registercomp() {
           dob:dob,
           contactInfo:{
               address:address,
-              mobileNo:9876543210,
+              mobileNo:mobile,
               parentMobileNo:8976543210
               
           },
